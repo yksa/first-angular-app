@@ -8,6 +8,18 @@ import {
   computed,
 } from '@angular/core';
 
+type User = {
+  id: string;
+  avatar: string;
+  name: string;
+};
+
+// interface User {
+//   id: string;
+//   avatar: string;
+//   name: string;
+// }
+
 @Component({
   selector: 'app-user',
   standalone: true,
@@ -20,11 +32,7 @@ export class UserComponent {
   // @Input({ required: true }) id!: string;
   // @Input({ required: true }) avatar!: string;
   // @Input({ required: true }) name!: string;
-  @Input({ required: true }) user!: {
-    id: string;
-    avatar: string;
-    name: string;
-  };
+  @Input({ required: true }) user!: User;
   @Output() select = new EventEmitter<string>();
 
   get imagePath() {
