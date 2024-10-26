@@ -7,12 +7,7 @@ import {
   output,
   computed,
 } from '@angular/core';
-
-type User = {
-  id: string;
-  avatar: string;
-  name: string;
-};
+import { type User } from './user.model';
 
 // interface User {
 //   id: string;
