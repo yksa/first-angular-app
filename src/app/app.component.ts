@@ -24,4 +24,9 @@ export class AppComponent {
   onSelectUser(id: string) {
     this.selectedUserId = id;
   }
+
+  onCompleteTask(id: string) {
+    console.log('onclomplete', id);
+    // this.selectedUserId = undefined;
+  }
 }
