@@ -1,7 +1,11 @@
+import { Injectable } from '@angular/core';
 import { dummyTasks } from '../dummy-tasks';
 import { newTask } from './task/task.model';
 
-class TasksService {
+@Injectable({
+  providedIn: 'root',
+})
+export class TasksService {
   private tasks = dummyTasks;
 
   getUserTasks(userId: string) {
