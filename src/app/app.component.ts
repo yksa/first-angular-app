@@ -15,7 +15,7 @@ export class AppComponent {
   title = 'first-angular-app';
 
   users = DUMMY_USERS;
-  selectedUserId?: string;
+  selectedUserId?: string = '';
 
   get selectedUser() {
     return this.users.find((user) => user.id === this.selectedUserId);
