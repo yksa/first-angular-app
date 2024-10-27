@@ -1,7 +1,6 @@
 import { Component, Input, input } from '@angular/core';
 import { TaskComponent } from './task/task.component';
 import { NewTaskComponent } from './new-task/new-task.component';
-import { newTask } from './task/task.model';
 import { TasksService } from './tasks.service';
 
 @Component({
@@ -34,12 +33,7 @@ export class TasksComponent {
     this.isAddingTask = true;
   }
 
-  onCancelAddTask() {
+  onCloseAddTask() {
     this.isAddingTask = false;
-  }
-
-  onAddTask(task: newTask) {
-    this.isAddingTask = false;
-    this.tasksService.addTask(task, this.id);
   }
 }
